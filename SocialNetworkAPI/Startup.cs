@@ -37,6 +37,9 @@ namespace SocialNetworkAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            // To use the redirection if is not in https
+            //app.UseHttpsRedirection();
+
             app.UseRouting();
 
             app.UseAuthorization();
