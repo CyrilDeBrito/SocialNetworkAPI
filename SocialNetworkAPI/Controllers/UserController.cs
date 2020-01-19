@@ -59,8 +59,15 @@ namespace SocialNetworkAPI.Controllers
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<User> DeleteUser(User user)
+        public ActionResult<User> DeleteUser(int id)
         {
+            var user = userStore.Store.FirstOrDefault(u => u.Id == id);
+            if (user == null)
+            {
+                return BadRequest();
+            }
+            userStore.Store.RemoveAt(user.Id);
+            return NoContent();
         }
     }
 }
