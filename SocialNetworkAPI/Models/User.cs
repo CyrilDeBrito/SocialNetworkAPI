@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/// <summary>
+/// The user model
+/// int Id
+/// String Firstname
+/// String Lastname
+/// String Pseudo
+/// DateTime BirthDay
+/// List<Publication> Publications
+/// </summary>
+
 namespace SocialNetworkAPI.Models
 {
     public class User
