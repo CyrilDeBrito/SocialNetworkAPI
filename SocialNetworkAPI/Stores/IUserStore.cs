@@ -12,5 +12,7 @@ namespace SocialNetworkAPI.Stores
         List<User> Store { get; }
 
         int AddUser(User user);
+
+        int DeleteUser(User user);
     }
 }

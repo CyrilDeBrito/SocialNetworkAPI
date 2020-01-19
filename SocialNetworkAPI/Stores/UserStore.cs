@@ -18,5 +18,10 @@ namespace SocialNetworkAPI.Stores
             Store.Add(user);
             return user.Id;
         }
+
+        public int DeleteUser(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
