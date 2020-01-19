@@ -1,8 +1,8 @@
-﻿using SocialNetworkAPI.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using SocialNetworkAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SocialNetworkAPI.Stores
 {
@@ -11,5 +11,12 @@ namespace SocialNetworkAPI.Stores
         public UserStore() { }
 
         public List<User> Store { get; } = new List<User>();
+
+        public int AddUser(User user)
+        {
+            user.Id = Store.Any() ? (Store.Max(b => b.Id) + 1) : 1;
+            Store.Add(user);
+            return user.Id;
+        }
     }
 }

@@ -1,12 +1,16 @@
-﻿using System;
+﻿using SocialNetworkAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace SocialNetworkAPI.Stores
 {
-    interface ICommentStore
+    public interface ICommentStore
     {
-        // TODO
+        List<Comment> Store { get; }
+
+        int AddComment(Comment comment);
+
     }
 }

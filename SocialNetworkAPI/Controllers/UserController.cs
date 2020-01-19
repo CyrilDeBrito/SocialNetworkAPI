@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetworkAPI.Models;
 using SocialNetworkAPI.Stores;
-using System.Linq;
 
 namespace SocialNetworkAPI.Controllers
 {
+    // Link for postman:  socialNetwork/api/v1/user
     [Route("socialNetwork/api/v1/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -22,6 +22,7 @@ namespace SocialNetworkAPI.Controllers
             this.userStore = userStore;
         }
 
+        // Link for postman [GET]:  socialNetwork/api/v1/user
         [HttpGet]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         public User[] GetUsers()
@@ -29,6 +30,7 @@ namespace SocialNetworkAPI.Controllers
             return userStore.Store.ToArray();
         }
 
+        // Link for postman [GET]:  socialNetwork/api/v1/{id_of_user}
         [HttpGet("{id}")]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -44,6 +46,7 @@ namespace SocialNetworkAPI.Controllers
             return user;
         }
 
+        // Link for postman [POST]:  socialNetwork/api/v1/{name_of_user}
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
@@ -54,13 +57,13 @@ namespace SocialNetworkAPI.Controllers
             return CreatedAtAction(nameof(GetUser), new { user.Id }, user);
         }
 
+        // Link for postman [DELETE]:  socialNetwork/api/v1/{name_of_user}
         [HttpDelete("{id}")]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public void DeleteUser(int id)
+        public ActionResult<User> DeleteUser(User user)
         {
-            // SEARCH a delete method or try a linq syntax method to delete a user
         }
     }
 }

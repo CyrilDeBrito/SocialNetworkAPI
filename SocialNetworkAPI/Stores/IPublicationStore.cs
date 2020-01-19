@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace SocialNetworkAPI.Stores
 {
     interface IPublicationStore
-    { 
-        // TODO
+    {
+        List<Publication> Store { get; }
+
+        int AddPublication(Publication publication);
     }
 }
