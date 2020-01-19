@@ -21,7 +21,13 @@ namespace SocialNetworkAPI.Stores
 
         public int DeleteUser(User user)
         {
-            throw new NotImplementedException();
+            var userItem = Store.FirstOrDefault(u => u.Id == user.Id);
+            if (userItem == null)
+            {
+                return -1;
+            }
+            Store.RemoveAt(user.Id);
+            return user.Id;
         }
     }
 }
