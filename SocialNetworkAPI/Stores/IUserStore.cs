@@ -10,6 +10,7 @@ namespace SocialNetworkAPI.Stores
     public interface IUserStore
     {
         List<User> Store { get; }
+
         int AddUser(User user);
     }
 }

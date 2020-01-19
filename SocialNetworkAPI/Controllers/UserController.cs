@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Net.Mime;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialNetworkAPI.Models;
@@ -57,7 +54,7 @@ namespace SocialNetworkAPI.Controllers
             return CreatedAtAction(nameof(GetUser), new { user.Id }, user);
         }
 
-        // Link for postman [DELETE]:  socialNetwork/api/v1/{name_of_user}
+        // Link for postman [DELETE]:  socialNetwork/api/v1/{id_of_user}
         [HttpDelete("{id}")]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [ProducesResponseType(StatusCodes.Status200OK)]
