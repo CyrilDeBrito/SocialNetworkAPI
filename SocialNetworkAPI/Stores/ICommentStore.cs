@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SocialNetworkAPI.Stores
 {
-    interface IComment
+    interface ICommentStore
     {
         // TODO
     }

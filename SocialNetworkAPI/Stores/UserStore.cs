@@ -10,6 +10,6 @@ namespace SocialNetworkAPI.Stores
     {
         public UserStore() { }
 
-        public List<User> StoreUsers { get; } = new List<User>();
+        public List<User> Store { get; } = new List<User>();
     }
 }
