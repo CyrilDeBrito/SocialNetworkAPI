@@ -12,5 +12,6 @@ namespace SocialNetworkAPI.Stores
 
         int AddComment(Comment comment);
 
+        int DeleteComment(Comment comment);
     }
 }

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using SocialNetworkAPI.Models;
-using System;
+﻿using SocialNetworkAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
 

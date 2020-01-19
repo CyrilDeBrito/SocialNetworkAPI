@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SocialNetworkAPI.Models;
+using SocialNetworkAPI.Stores;
 
 namespace SocialNetworkAPI
 {
@@ -27,6 +28,10 @@ namespace SocialNetworkAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IUserStore, UserStore>();
+            services.AddSingleton<ICommentStore, CommentStore>();
+            services.AddSingleton<IPublicationStore, PublicationStore>();
+
             services.AddControllers()
                 // Offer service to represent resources in xml
                 .AddXmlSerializerFormatters();

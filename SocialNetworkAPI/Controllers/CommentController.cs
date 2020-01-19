@@ -60,8 +60,15 @@ namespace SocialNetworkAPI.Controllers
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<Comment> DeleteComment(Comment comment)
+        public ActionResult<Comment> DeleteComment(int id)
         {
+            var comm = commentStore.Store.FirstOrDefault(u => u.Id == id);
+            if (comm == null)
+            {
+                return BadRequest();
+            }
+            commentStore.Store.RemoveAt(comm.Id);
+            return NoContent();
         }
     }
 }

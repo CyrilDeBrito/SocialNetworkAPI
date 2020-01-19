@@ -18,5 +18,16 @@ namespace SocialNetworkAPI.Stores
             Store.Add(comment);
             return comment.Id;
         }
+
+        public int DeleteComment(Comment comment)
+        {
+            var commentItem = Store.FirstOrDefault(u => u.Id == comment.Id);
+            if (commentItem == null)
+            {
+                return -1;
+            }
+            Store.RemoveAt(comment.Id);
+            return comment.Id;
+        }
     }
 }

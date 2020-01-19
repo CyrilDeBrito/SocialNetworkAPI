@@ -8,5 +8,7 @@ namespace SocialNetworkAPI.Stores
         List<Publication> Store { get; }
 
         int AddPublication(Publication publication);
+
+        int DeletePublication(Publication publication);
     }
 }

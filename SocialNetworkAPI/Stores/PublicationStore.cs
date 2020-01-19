@@ -18,5 +18,16 @@ namespace SocialNetworkAPI.Stores
             Store.Add(publication);
             return publication.Id;
         }
+
+        public int DeletePublication(Publication publication)
+        {
+            var publicationItem = Store.FirstOrDefault(u => u.Id == publication.Id);
+            if (publicationItem == null)
+            {
+                return -1;
+            }
+            Store.RemoveAt(publication.Id);
+            return publication.Id;
+        }
     }
 }
