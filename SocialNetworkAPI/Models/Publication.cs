@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SocialNetworkAPI.Models
 {
-    public class Comment
+    public class Publication
     {
         public int Id { get; set; }
         public String Title { get; set; }
