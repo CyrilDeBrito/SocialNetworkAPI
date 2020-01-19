@@ -21,7 +21,7 @@ namespace SocialNetworkAPI.Models
         public String Firstname { get; set; }
         public String Lastname { get; set; }
         public String Pseudo { get; set; }
-        public DateTime BirthDay { get; set; }
+        public int BirthDay { get; set; }
         public List<Publication> Publications { get; set; }
     }
 }

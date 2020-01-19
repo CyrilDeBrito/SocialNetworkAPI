@@ -1,0 +1,41 @@
+{
+	"Id": 1,
+	"Firstname": "Alphonse",
+	"Lastname": "Danletas",
+	"Pseudo": "Aldantaface",
+	"BirthDay": 18,
+	"Publications": [{
+		"Id": 10,
+		"Title": "SaFe Method",
+		"Description": "It is an agile method for a big project",
+		"Comments": [{
+			"Id": 101,
+			"Commentary": "Tutu is on the beach"
+		},
+		{
+			"Id": 102,
+			"Commentary":"Titi play basketball"	
+		},
+		{
+			"Id": 103,
+			"Commentary": "Tata cooks a cake"
+		}]
+	},
+	{
+		"Id": 11,
+		"Title": "Scrum Method",
+		"Description": "It is an agile method for a small project",
+		"Comments": [{
+			"Id": 111,
+			"Commentary": "Agilist is good"
+		},
+		{
+			"Id": 112,
+			"Commentary":"Agilist is bad"	
+		},
+		{
+			"Id": 113,
+			"Commentary": "no comment"
+		}]
+	}]
+}
