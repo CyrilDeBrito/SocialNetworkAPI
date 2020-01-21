@@ -45,6 +45,7 @@ namespace SocialNetworkAPI.Controllers
         }
 
         // Link for postman [POST]:  socialNetwork/api/v1/{name_of_comment}
+        // Exemple of postman Json : Templates\JSON\post_comment
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]

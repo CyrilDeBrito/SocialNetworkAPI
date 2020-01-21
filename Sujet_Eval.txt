@@ -2,10 +2,10 @@ Ecrire une web API documentée, respectant l'architecture REST
 et offrant la possibilité d'administrer un pseudo réseau social public
 (CRUD de publication et de commentaires liés au publication)
 La web API devra:
-	- fonctionner via http et https
-	- offrir la possibilité de représenter les ressources en json et en xml
-	- retourner les codes de statut http appropriés
-	- la base de l'url de l'api sera /api/
+	- OK) fonctionner via http et https
+	- OK)  offrir la possibilité de représenter les ressources en json et en xml
+	- OK)  retourner les codes de statut http appropriés
+	- OK)  la base de l'url de l'api sera /api/
 	- il faut une persistence des données au moins tant que la web API est lancée (avec gestion de durée de vie)
 
 Vous êtes libre de gérer la persistence des données comme bon vous semble, néanmoins cela devra être fait

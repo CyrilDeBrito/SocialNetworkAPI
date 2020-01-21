@@ -4,4 +4,7 @@ Package NUGETS
 swashbuckle.AspNetCore mettre a jour v5 (click droit sur la soclution, gérer les package NuGet, 
 	cocher "inclure la version préliminaire", Parcourir, "swashbuckle.AspNetCore" choisir la V5)
 
+In local, to use SocialNetwaorkAPI : 
+https://localhost:5001/swagger/index.html#
+
 

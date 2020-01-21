@@ -15,6 +15,7 @@ using SocialNetworkAPI.Models;
 using SocialNetworkAPI.Stores;
 
 namespace SocialNetworkAPI
+// In local, to use SocialNetwaorkAPI : https://localhost:5001/swagger/index.html#
 {
     public class Startup
     {
@@ -38,7 +39,17 @@ namespace SocialNetworkAPI
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo() { Title = "My SocialNetwork API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo() { 
+                    Title = "SocialNetwork API", 
+                    Version = "v1",
+                    Description = "Customers API to SocialNetworkAPI Swagger",
+                    Contact = new Contact
+                    {
+                        Name = "De Brito Cyril & Fulgence Athur",
+                        Email = "developpeur@cyrildebrito.info",
+                        Url = "cyrildebrito.info/"
+                    },
+                });
             }
             );
         }

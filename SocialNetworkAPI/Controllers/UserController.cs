@@ -44,7 +44,8 @@ namespace SocialNetworkAPI.Controllers
             return user;
         }
 
-        // Link for postman [POST]:  socialNetwork/api/v1/{name_of_user}
+        // Link for postman [POST]:  socialNetwork/api/v1/user
+        // Exemple of postman Json : Templates\JSON\post_user
         [HttpPost]
         [Consumes(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
