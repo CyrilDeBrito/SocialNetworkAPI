@@ -15,7 +15,7 @@ using SocialNetworkAPI.Models;
 using SocialNetworkAPI.Stores;
 
 namespace SocialNetworkAPI
-// In local, to use SocialNetwaorkAPI : https://localhost:5001/swagger/index.html#
+// In local, to use SocialNetwaorkAPI : https://localhost:5001/swagger/index.html
 {
     public class Startup
     {
