@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -57,17 +58,41 @@ namespace SocialNetworkAPI.Controllers
         // Link for postman [DELETE]:  socialNetwork/api/v1/{id_of_user}
         [HttpDelete("{id}")]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<User> DeleteUser(int id)
         {
+            // Get the user
             var user = userStore.Store.FirstOrDefault(u => u.Id == id);
             if (user == null)
             {
+                return NotFound();
+            }
+            // Remove from the Store
+            userStore.Store.Remove(user);
+            return new OkResult();
+        }
+
+        // Link for postman [PUT]:  socialNetwork/api/v1/{id_of_user}
+        [HttpPut("{id}")]
+        [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
+        public ActionResult<User> UpdateUser(int id, User user)
+        {
+            if (user == null || user.Id != id)
+            {
                 return BadRequest();
             }
-            userStore.Store.RemoveAt(user.Id);
-            return NoContent();
+
+            // Get the user
+            var existingUser = userStore.Store.FirstOrDefault(u => u.Id == id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Remove the user
+            userStore.Store.Remove(existingUser);
+            // Re-create the user
+            userStore.Store.Add(user);
+            return new OkResult();
         }
     }
 }
