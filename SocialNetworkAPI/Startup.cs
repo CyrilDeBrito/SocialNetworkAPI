@@ -46,8 +46,8 @@ namespace SocialNetworkAPI
                     Contact = new Contact
                     {
                         Name = "De Brito Cyril & Fulgence Athur",
-                        Email = "developpeur@cyrildebrito.info",
-                        Url = "cyrildebrito.info/"
+                        Email = "developpeur@cyrildebrito.info & arthurkevin.fulgence@gmail.com",
+                        Url = "http://cyrildebrito.info/ & https://fr.linkedin.com/in/arthur-fulgence-abb871156"
                     },
                 });
             }
