@@ -57,17 +57,41 @@ namespace SocialNetworkAPI.Controllers
         // Link for postman [DELETE]:  socialNetwork/api/v1/{id_of_publication}
         [HttpDelete("{id}")]
         [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public ActionResult<Publication> DeletePublication(int id)
         {
-            var pub = publicationStore.Store.FirstOrDefault(u => u.Id == id);
+            // Get the publication
+            var pub = publicationStore.Store.FirstOrDefault(p => p.Id == id);
             if (pub == null)
+            {
+                return NotFound();
+            }
+            // Remove from the Store
+            publicationStore.Store.Remove(pub);
+            return new OkResult();
+        }
+
+        // Link for postman [PUT]:  socialNetwork/api/v1/{id_of_publication}
+        [HttpPut("{id}")]
+        [Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml)]
+        public ActionResult<Publication> UpdatePublication(int id, Publication pub)
+        {
+            if (pub == null || pub.Id != id)
             {
                 return BadRequest();
             }
-            publicationStore.Store.RemoveAt(pub.Id);
-            return NoContent();
+
+            // Get the publication
+            var existingPublication = publicationStore.Store.FirstOrDefault(p => p.Id == id);
+            if (pub == null)
+            {
+                return NotFound();
+            }
+
+            // Remove the publication
+            publicationStore.Store.Remove(existingPublication);
+            // Re-create the publication
+            publicationStore.Store.Add(pub);
+            return new OkResult();
         }
     }
 }
