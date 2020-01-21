@@ -8,4 +8,4 @@ In local, to use SocialNetworkAPI :
 https://localhost:5001/swagger/index.html#
 
 
-Nous avons réalisés ce projet 
+Clone : https://github.com/CyrilDeBrito/SocialNetworkAPI.git
