@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "2b885319-4001-4146-96e7-d5fad548e1ab",
+		"name": "SocialNetworkApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Post] comment",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1dbd18e8-c13f-48cb-ba6e-bf6fa1da98a3",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": 1,\r\n\t\"commentary\": \"Toto is in the wooden\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/socialNetwork/api/v1/comment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"socialNetwork",
+						"api",
+						"v1",
+						"comment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Post] publication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Title\": \"SaFe Method\",\n\t\"Description\": \"It is an agile method for a big project\",\n\t\"Comments\": [{\n\t\t\"Id\": 1,\n\t\t\"Commentary\": \"Tutu is on the beach\"\n\t},\n\t{\n\t\t\"Id\": 2,\n\t\t\"Commentary\": \"Titi play basketball\"\n\t},\n\t{\n\t\t\"Id\": 3,\n\t\t\"Commentary\": \"Tata cooks a cake\"\n\t}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/socialNetwork/api/v1/publication",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"socialNetwork",
+						"api",
+						"v1",
+						"publication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Post] user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Id\": 1,\r\n\t\"Firstname\": \"Alphonse\",\r\n\t\"Lastname\": \"Danletas\",\r\n\t\"Pseudo\": \"Aldantaface\",\r\n\t\"BirthDay\": 18,\r\n\t\"Publications\": [{\r\n\t\t\"Id\": 10,\r\n\t\t\"Title\": \"SaFe Method\",\r\n\t\t\"Description\": \"It is an agile method for a big project\",\r\n\t\t\"Comments\": [{\r\n\t\t\t\"Id\": 101,\r\n\t\t\t\"Commentary\": \"Tutu is on the beach\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 102,\r\n\t\t\t\"Commentary\":\"Titi play basketball\"\t\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 103,\r\n\t\t\t\"Commentary\": \"Tata cooks a cake\"\r\n\t\t}]\r\n\t},\r\n\t{\r\n\t\t\"Id\": 11,\r\n\t\t\"Title\": \"Scrum Method\",\r\n\t\t\"Description\": \"It is an agile method for a small project\",\r\n\t\t\"Comments\": [{\r\n\t\t\t\"Id\": 111,\r\n\t\t\t\"Commentary\": \"Agilist is good\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 112,\r\n\t\t\t\"Commentary\":\"Agilist is bad\"\t\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 113,\r\n\t\t\t\"Commentary\": \"no comment\"\r\n\t\t}]\r\n\t}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/socialNetwork/api/v1/user",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"socialNetwork",
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Get] user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Delete] user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Put] user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Id\": 1,\r\n\t\"Firstname\": \"Alphonsio\",\r\n\t\"Lastname\": \"Danletalas\",\r\n\t\"Pseudo\": \"Aldantafacios\",\r\n\t\"BirthDay\": 18,\r\n\t\"Publications\": [{\r\n\t\t\"Id\": 10,\r\n\t\t\"Title\": \"SaFe Method is so Cool !\",\r\n\t\t\"Description\": \"It is an agile method for a big project\",\r\n\t\t\"Comments\": [{\r\n\t\t\t\"Id\": 101,\r\n\t\t\t\"Commentary\": \"Tutu is on the beach\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 102,\r\n\t\t\t\"Commentary\":\"Titi play basketball\"\t\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 103,\r\n\t\t\t\"Commentary\": \"Tata cooks a cake\"\r\n\t\t}]\r\n\t},\r\n\t{\r\n\t\t\"Id\": 11,\r\n\t\t\"Title\": \"Scrum Method\",\r\n\t\t\"Description\": \"It is an agile method for a small project\",\r\n\t\t\"Comments\": [{\r\n\t\t\t\"Id\": 111,\r\n\t\t\t\"Commentary\": \"Agilist is good\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 112,\r\n\t\t\t\"Commentary\":\"Agilist is bad\"\t\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Id\": 113,\r\n\t\t\t\"Commentary\": \"no comment\"\r\n\t\t}]\r\n\t}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/socialNetwork/api/v1/user/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"socialNetwork",
+						"api",
+						"v1",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
